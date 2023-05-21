@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const textarea = document.querySelector("textarea");
   const copy = document.getElementById("copy");
   const form = document.getElementById("chat-form");
-  const apiKey = "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";
+  const apiKey = "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";
 
   var voiceList = document.querySelector("#voiceList");
   var btnSpeak = document.querySelector("#btnSpeak");
