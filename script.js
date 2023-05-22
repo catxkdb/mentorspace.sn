@@ -141,6 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const message = textarea.value;
+    console.log(message)
     textarea.value = "";
 
     // Use axios library to make a POST request to the OpenAI API
@@ -184,6 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     );
     const chatbotResponse = response.data.choices[0].text;
+    console.log(chatbotResponse)
 
     textarea.value = message + chatbotResponse;
   });
