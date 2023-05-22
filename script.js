@@ -185,6 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     );
     const chatbotResponse = response.data.choices[0].text;
+    console.log(response)
     console.log(chatbotResponse)
 
     textarea.value = message + chatbotResponse;
