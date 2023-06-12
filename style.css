@@ -1,166 +1,170 @@
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  padding: 0px 100px;
-  font-family: "Comic Neue";
-}
-
-.title {
-  font-weight: 400;
-  color: black;
-  margin-top: 150px;
-}
-
-.container {
-  margin-top: 50px;
-}
-
-.upper div {
-  display: inline;
-  margin-left: 100px;
-  white-space: pre;
-}
-
-.bottom {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: row;
-}
-
-.bottom div {
-  flex: 1;
-  border: 1px solid rgb(118, 118, 118);
-  height: 400px;
-  margin: 10px;
-}
-
-.bottom div img {
-  max-width: calc(100% - 20px);
-  max-height: calc(100% - 20px);
-  margin: 10px;
-}
-
-.bottom div textarea {
-  resize: none;
-  width: calc(100% - 21px);
-  height: calc(100% - 21px);
-  padding: 10px;
-  font-size: 20px;
-  outline: none;
-  border: none;
-}
-
-.bottom div:first-child {
-  margin-left: 0px;
-  -webkit-box-align: center;
-  -webkit-box-pack: center;
-  display: -webkit-box;
-}
-
-.bottom div:last-child {
-  margin-right: 0px;
-}
-
-#copy {
-  margin-top: -100px;
-}
-
-.button {
-  background-color: rgb(30, 131, 255);
-  border-radius: 6px;
-  color: white;
-  height: 30px;
-  width: 200px;
-  margin-top: 10px;
-  font-family: "Comic Neue";
-}
-
-#convert-button {
-  font-size: 10px;
-}
-
-#file {
-  font-family: "Comic Neue";
-}
-
-/*.lower-buttons {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-evenly;
-  align-items: baseline;
-}
-*/
-
-.class-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
-
-.chosen-class {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  visibility: hidden;
-}
-
-#word-count {
-  display: block;
-  margin-left: 500px;
-  margin-top: 0px;
-}
-
-#header {
-  z-index: 1;
-  position: fixed;
-  width: 150%;
-  margin-top: -20px;
-  height: 150px;
-  background-color: #000000;
-  margin-bottom: 10px;
-  margin-left: -100px;
-  align-items: center;
-  vertical-align: center;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content:start;
-}
-
-.logo {
-  margin-left: 40px;
-  margin-top: -115px;
-  width: 400px;
-  height: 400px;
-}
-
-#upgrade-btn {
-  margin-top: -120px;
-  margin-left: -100px;
-  font-size: 30px;
-  width: 316px;
-  height: 58px;
-  background-color: #4075BD;
-  border-radius: 100px;
-  border-width: 0;
-}
-
-.user-icon {
-  width: 80px;
-  height: 50px;
-  margin-top: -120px;
-  margin-left: 500px;
-}
-
-.sub-title {
-  font-weight: 400;
-  font-size: 20px;
-}
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    padding: 0px 100px;
+    font-family: "Comic Neue";
+  }
+  
+  .title {
+    font-weight: 400;
+    color: black;
+    margin-top: 150px;
+  }
+  
+  .container {
+    margin-top: 50px;
+  }
+  
+  .upper div {
+    display: inline;
+    margin-left: 100px;
+    white-space: pre;
+  }
+  
+  .bottom {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .bottom div {
+    flex: 1;
+    border: 1px solid rgb(118, 118, 118);
+    height: 400px;
+    margin: 10px;
+  }
+  
+  .bottom div img {
+    max-width: calc(100% - 20px);
+    max-height: calc(100% - 20px);
+    margin: 10px;
+  }
+  
+  .bottom div textarea {
+    resize: none;
+    width: calc(100% - 21px);
+    height: calc(100% - 21px);
+    padding: 10px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+  }
+  
+  .bottom div:first-child {
+    margin-left: 0px;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    display: -webkit-box;
+  }
+  
+  .bottom div:last-child {
+    margin-right: 0px;
+  }
+  
+  #copy {
+    margin-top: -100px;
+  }
+  
+  .button {
+    background-color: rgb(30, 131, 255);
+    border-radius: 6px;
+    color: white;
+    height: 30px;
+    width: 200px;
+    margin-top: 10px;
+    font-family: "Comic Neue";
+  }
+  
+  #convert-button {
+    font-size: 10px;
+  }
+  
+  #file {
+    font-family: "Comic Neue";
+  }
+  
+  /*.lower-buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: baseline;
+  }
+  */
+  
+  .class-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  
+  .chosen-class {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    visibility: hidden;
+  }
+  
+  #word-count {
+    display: block;
+    margin-left: 500px;
+    margin-top: 0px;
+  }
+  
+  #header {
+    z-index: 1;
+    position: fixed;
+    width: 150%;
+    margin-top: -20px;
+    height: 150px;
+    background-color: #000000;
+    margin-bottom: 10px;
+    margin-left: -100px;
+    align-items: center;
+    vertical-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+  
+  .logo {
+    margin-left: 40px;
+    margin-top: -115px;
+    width: 400px;
+    height: 400px;
+  }
+  
+  #upgrade-btn {
+    margin-top: -120px;
+    margin-left: -100px;
+    font-size: 30px;
+    width: 316px;
+    height: 58px;
+    background-color: #4075BD;
+    border-radius: 100px;
+    border-width: 0;
+  }
+  
+  .user-icon {
+    width: 80px;
+    height: 50px;
+    margin-top: -120px;
+    margin-left: 500px;
+  }
+  
+  .sub-title {
+    font-weight: 400;
+    font-size: 20px;
+  }
+  
+  .side {
+    display: inline-block;
+  }

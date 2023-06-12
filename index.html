@@ -1,70 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mentorspace</title>
-    <script src="https://unpkg.com/tesseract.js@v2.0.0-alpha.13/dist/tesseract.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.3/axios.min.js"></script>
-    <script
-      src="https://kit.fontawesome.com/dc8825c810.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    />
-  </head>
-  <body>
-    <div id="header">
-      <img class="logo" src="images/logo.png" />
-      <button class="button" id="upgrade-btn">+upgrade to pro</button>
-      <img class="user-icon" src="images/user-icon.png" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mentorspace</title>
+  <script src="https://unpkg.com/tesseract.js@v2.0.0-alpha.13/dist/tesseract.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.3/axios.min.js"></script>
+  <script src="https://kit.fontawesome.com/dc8825c810.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet" />
+  />
+  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+  <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+</head>
+
+<body>
+  <!-- <py-script src="app.py">
+
+    </py-script> -->
+  <div id="header">
+    <img class="logo" src="images/logo.png" />
+    <button class="button" id="upgrade-btn">+upgrade to pro</button>
+    <img class="user-icon" src="images/user-icon.png" />
+  </div>
+  <h1 class="title">Marker and Grader AI Editor</h1>
+  <h2 class="sub-title">start mentorspace AI marking...</h2>
+  <div class="chosen-class" id="chosen-class">
+    <button class="button" id="new-student">&#43; Add new student</button>
+  </div>
+  <!-- new scanner -->
+  <div class="scanner">
+    <h2>Your Webcam</h2>
+    <video class="side" id="video" autoplay="true"></video>
+    <h2>Picture Taken</h2>
+    <canvas class="side" id="canvas" width="650" height="490"></canvas>
+  </div>
+  <div class="capture">
+    <button class="btn side" id="capture">Capture</button>
+    <h3>Click "Capture" to take picture of essay</h3>
+  </div>
+
+  <div class="container">
+    <div class="upper">
+      <h3>or choose a file</h3>
+      <input type="file" id="file" />
+      <button class="button" id="convert-button">
+        Convert image to text (this may take a while, please be patient
+      </button>
+      <p class="progress">Progress</p>
     </div>
-    <h1 class="title">Marker and Grader AI Editor</h1>
-    <h2 class="sub-title">start mentorspace AI marking...</h2>
-    <div class="chosen-class" id="chosen-class">
-      <button class="button" id="new-student">&#43; Add new student</button>
-    </div>
-    <div class="container">
-      <div class="upper">
-        <input type="file" id="file" />
-        <button class="button" id="convert-button">
-          Convert image to text (this may take a while, please be patient
-        </button>
-        <p class="progress">Progress</p>
+    <div class="bottom">
+      <div>
+        <img class="image" id="image" src="" />
       </div>
-      <div class="bottom">
-        <div>
-          <img class="image" id="image" src="" />
-        </div>
-        <div>
-          <textarea
-            id="input"
-            placeholder="If you don't have an image or the uploaded image isn't compatible, just paste in your text here"
-          ></textarea>
-          <p id="word-count">0 words</p>
-          <!--<div class="lower-buttons">-->
-          <button class="button" id="copy">Copy to Clipboard</button>
-          <form id="chat-form">
-            <button class="button" type="submit">Improve</button>
-          </form>
-          Select Voice:
-          <select id="voiceList"></select>
-          <br /><br />
-          <button class="button" id="btnSpeak">Feedback text to speech</button>
-          <!--</div>-->
-        </div>
+      <div>
+        <textarea id="input"
+          placeholder="If you don't have an image or the uploaded image isn't compatible, just paste in your text here"></textarea>
+        <p id="word-count">0 words</p>
+        <!--<div class="lower-buttons">-->
+        <button class="button" id="copy">Copy to Clipboard</button>
+        <form id="chat-form">
+          <button class="button" type="submit">Improve</button>
+        </form>
+        Select Voice:
+        <select id="voiceList"></select>
+        <br /><br />
+        <button class="button" id="btnSpeak">Feedback text to speech</button>
+        <!--</div>-->
       </div>
     </div>
-    <!-- <iframe src="https://web.powerva.microsoft.com/environments/Default-19f73946-01ae-44fa-a0a3-065646191a8f/bots/new_bot_1ff08651ec8d4ef0ba8208e7d13439e8/webchat" frameborder="0" style="width: 1000px; height: 1000px; vertical-align: middle;"></iframe>-->
-  </body>
+  </div>
+  <!-- <iframe src="https://web.powerva.microsoft.com/environments/Default-19f73946-01ae-44fa-a0a3-065646191a8f/bots/new_bot_1ff08651ec8d4ef0ba8208e7d13439e8/webchat" frameborder="0" style="width: 1000px; height: 1000px; vertical-align: middle;"></iframe>-->
+</body>
+
 </html>
